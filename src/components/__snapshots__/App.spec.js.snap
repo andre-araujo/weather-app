@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should match snapshot 1`] = `
+<React.Fragment>
+  <h1>
+    My sweet page
+  </h1>
+</React.Fragment>
+`;

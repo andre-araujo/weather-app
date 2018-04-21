@@ -1,0 +1,76 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "A simple app to do weather forecast world-wide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andre-araujo/weather-forecast"
+  },
+  "author": "andre-araujo <andreluis9214@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel -p 3000 ./src/index.html ",
+    "build": "cross-env NODE_ENV=production parcel build ./src/index.html --public-url /",
+    "commit": "git-cz",
+    "lint:fix": "eslint ./src --fix",
+    "lint": "eslint ./src",
+    "test": "jest --no-cache",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "cross-env": "^5.1.4",
+    "cz-conventional-changelog": "^2.0.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "enzyme-to-json": "^3.2.1",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^21.2.1",
+    "raf": "^3.4.0",
+    "react-addons-test-utils": "^15.6.0",
+    "react-test-renderer": "^16.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "verbose": true,
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/shim.js",
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^8.3.0",
+    "parcel-bundler": "^1.7.1",
+    "postcss-modules": "^1.1.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}

@@ -1,0 +1,8 @@
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 8px;
+}
+
+.title {
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+body {
+  font-size: 16px;
+  font-family: Roboto;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+* {
+  box-sizing: border-box;
+}

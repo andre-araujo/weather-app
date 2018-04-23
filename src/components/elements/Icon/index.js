@@ -1,13 +1,13 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import cx from './styles.css';
+import styles from './styles.css';
 
 function Icon({
   name,
 }) {
   return (
-    <i className={cx.icon}>{name}</i>
+    <i className={styles.icon}>{name}</i>
   );
 }
 
@@ -17,8 +17,11 @@ Icon.propTypes = {
 
 Icon.Compass = () => Icon({ name: '(' });
 Icon.Sun = () => Icon({ name: 'B' });
-Icon.Cloudy = () => Icon({ name: 'H' });
+Icon.SunnyCloudy = () => Icon({ name: 'H' });
+Icon.Cloudy = () => Icon({ name: 'Y' });
 Icon.Rainy = () => Icon({ name: 'R' });
 Icon.Storm = () => Icon({ name: 'O' });
+Icon.Snow = () => Icon({ name: 'X' });
+Icon.NA = () => Icon({ name: ')' });
 
 export default Icon;

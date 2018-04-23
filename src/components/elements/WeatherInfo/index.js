@@ -1,6 +1,7 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 
+import Icon from '../Icon';
 import cx from './styles.css';
 
 function WeatherInfo({
@@ -13,14 +14,19 @@ function WeatherInfo({
 }) {
   return (
     <div className={cx.container}>
-      <div className={cx.container}>
-        <p>{day}</p>
-        <p>{temperature}</p>
+      <div className={cx.icon}>
+        <Icon.Sun />
       </div>
-      <p>{weather}</p>
-      <p>Vento: {wind}</p>
-      <p>Humidade: {humidity}</p>
-      <p>Pressão: {pressure}</p>
+      <div className={cx.content}>
+        <div className={cx.temperature}>
+          <time dateTime={new Date()}>{day}</time>
+          <p className={cx.largeText}>{temperature}ºC</p>
+        </div>
+        <p className={cx.largeText}>{weather}</p>
+        <p className={cx.smallText}>Vento: {wind}</p>
+        <p className={cx.smallText}>Humidade: {humidity}</p>
+        <p className={cx.smallText}>Pressão: {pressure}</p>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,39 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.input {
+  font-size: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 5px solid #333;
+  background: none;
+  transition: .2s border-color;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input:focus {
+  border-color: orange;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.row {
+  margin-bottom: 15px;
+}

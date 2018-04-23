@@ -2,6 +2,7 @@
 
 exports[`App component should match snapshot 1`] = `
 <React.Fragment>
+  <WeatherForecast />
   <h1>
     My sweet page
   </h1>

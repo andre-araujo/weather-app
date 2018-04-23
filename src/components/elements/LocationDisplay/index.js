@@ -2,16 +2,16 @@ import React from 'react';
 import { string } from 'prop-types';
 
 import Icon from '../Icon';
-import cx from './styles.css';
+import styles from './styles.css';
 
 function LocationDisplay({
   city,
   state,
 }) {
   return (
-    <header className={cx.container}>
-      <span className={cx.icon}><Icon.Compass className={cx.icon} /></span>
-      <h1 className={cx.title}>
+    <header className={styles.container}>
+      <span className={styles.icon}><Icon.Compass className={styles.icon} /></span>
+      <h1 className={styles.title}>
         {city}, {state}
       </h1>
     </header>

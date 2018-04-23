@@ -1,12 +1,39 @@
 .container {
   padding: 0 8px;
   display: flex;
+  height: 100px;
+  overflow: hidden;
+  transition: .2s height;
+  border: 0;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .2)
+}
+
+.openInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  cursor: pointer;
+  background: 0;
+  color: transparent;
+  user-select: none;
+  border: 0;
+  z-index: 1;
+}
+
+.openInfo:disabled {
+  pointer-events: none;
 }
 
 .content {
   color: #fff;
   padding: 16px 0;
   font-weight: 400;
+  text-align: left;
 }
 
 .temperature {
@@ -20,10 +47,19 @@
   font-size: 20px;
 }
 
+.toggleTemperature,
 .largeText {
   font-size: 23px;
   color: inherit;
   margin-bottom: 16px;
+}
+
+.toggleTemperature {
+  padding: 0;
+  background: none;
+  border: 0;
+  pointer-events: none;
+  outline: none;
 }
 
 .smallText {
@@ -33,10 +69,35 @@
 }
 
 .icon {
-  font-size: 260px;
+  font-size: 200px;
   display: flex;
   align-items: center;
-  padding: 16px 0 0 5px;
+  justify-content: center;
+  padding: 16px 50px 0 0;
   width: 58%;
   color: #fff;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  transition: .2s opacity;
+}
+
+.active {
+  height: 280px;
+  cursor: default;
+}
+
+.active .hidden {
+  opacity: 1;
+}
+
+.active .toggleTemperature {
+  pointer-events: all;
+}
+
+.active .toggleTemperature:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px black;
 }

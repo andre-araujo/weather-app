@@ -1,6 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
+import Icon from '../Icon';
 import cx from './styles.css';
 
 function LocationDisplay({
@@ -9,7 +10,10 @@ function LocationDisplay({
 }) {
   return (
     <header className={cx.container}>
-      <h1 className={cx.title}>{city}, {state}</h1>
+      <span className={cx.icon}><Icon.Compass className={cx.icon} /></span>
+      <h1 className={cx.title}>
+        {city}, {state}
+      </h1>
     </header>
   );
 }

@@ -19,8 +19,8 @@ function LocationDisplay({
 }
 
 LocationDisplay.defaultProps = {
-  city: null,
-  state: null,
+  city: '',
+  state: '',
 };
 
 LocationDisplay.propTypes = {

@@ -2,9 +2,12 @@
 
 exports[`App component should match snapshot 1`] = `
 <React.Fragment>
-  <WeatherForecast />
-  <h1>
-    My sweet page
-  </h1>
+  <ImageBackground
+    imageURL="https://www.bing.com/az/hprichbg/rb/VikingHouse_PT-BR10853372693_1920x1080.jpg"
+  />
+  <LocationInput
+    onGetCoords={[Function]}
+    onSearch={[Function]}
+  />
 </React.Fragment>
 `;

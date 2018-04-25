@@ -19,7 +19,9 @@
       "describe": true,
       "it": true,
       "fetch": true,
-      "window": true
+      "window": true,
+      "jest": true,
+      "beforeEach": true
   },
   "rules": {
       "linebreak-style": [0],

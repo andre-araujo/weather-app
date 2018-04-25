@@ -9,7 +9,9 @@
   "author": "andre-araujo <andreluis9214@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel -p 3000 ./src/index.html",
+    "start": "npm run start:server & npm run start:dev",
+    "start:dev": "cross-env NODE_ENV=development parcel -p 3000 ./src/index.html",
+    "start:server": "node server.js",
     "build": "cross-env NODE_ENV=production parcel build ./src/index.html --public-url /",
     "commit": "git-cz",
     "lint:fix": "eslint ./src --fix",
@@ -81,6 +83,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "request": "^2.85.0",
     "whatwg-fetch": "^2.0.4"
   }
 }

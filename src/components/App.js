@@ -1,14 +1,27 @@
 import React, { Component, Fragment } from 'react';
+
+import { getImage } from '../services/imageAPI';
+import { getWeatherByLocationName, getWeatherByLatLong } from '../services/yahooAPI';
+
+import imageFactory from '../services/factories/imageFactory';
+import weatherForecastFactory from '../services/factories/weatherForecastFactory';
+
 import WeatherForecast from './modules/WeatherForecast';
 import ImageBackground from './modules/ImageBackground';
 import LocationInput from './modules/LocationInput';
-import { getWeatherByLocationName, getWeatherByLatLong } from '../services/yahooAPI';
-import weatherForecastFactory from '../services/factories/weatherForecastFactory';
+
 
 class App extends Component {
   state={
-    imageURL: 'https://www.bing.com/az/hprichbg/rb/VikingHouse_PT-BR10853372693_1920x1080.jpg',
+    imageURL: '#',
     weather: null,
+  }
+
+  componentDidMount() {
+    getImage()
+      .then(resp => resp.json())
+      .then(imageFactory)
+      .then(({ imageURL }) => this.setState({ imageURL }));
   }
 
   getWeatherByLocationName = (locationName) => {

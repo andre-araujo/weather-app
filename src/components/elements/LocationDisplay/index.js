@@ -2,7 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 
 import Icon from '../Icon';
-import styles from './styles.css';
+import styles from './styles.less';
 
 function LocationDisplay({
   city,

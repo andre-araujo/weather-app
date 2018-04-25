@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { func } from 'prop-types';
 
-import styles from './styles.css';
+import styles from './styles.less';
 import Icon from '../../elements/Icon';
 import Button from '../../elements/Button';
 import getLatLong from '../../../lib/getLatLong';

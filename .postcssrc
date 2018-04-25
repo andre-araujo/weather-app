@@ -1,6 +1,15 @@
 {
   "modules": true,
   "plugins": {
+    "postcss-pxtorem": {
+      rootValue: 16,
+      unitPrecision: 5,
+      propList: ['*'],
+      selectorBlackList: ['body', 'html'],
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 0
+    },
     "postcss-modules": {
       "generateScopedName": "_[path]_[name]__[local]"
     },

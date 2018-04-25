@@ -1,3 +1,5 @@
+@import '../../../styles/settings/colors.less';
+
 .container {
   padding: 0 8px;
   display: flex;
@@ -30,7 +32,7 @@
 }
 
 .content {
-  color: #fff;
+  color: @white;
   padding: 16px 0;
   font-weight: 400;
   text-align: left;
@@ -75,7 +77,8 @@
   justify-content: center;
   padding: 16px 50px 0 0;
   width: 58%;
-  color: #fff;
+  flex:  0 0 58%;
+  color: @white;
   text-align: center;
 }
 
@@ -87,17 +90,17 @@
 .active {
   height: 280px;
   cursor: default;
-}
 
-.active .hidden {
-  opacity: 1;
-}
+  .hidden {
+    opacity: 1;
+  }
 
-.active .toggleTemperature {
-  pointer-events: all;
-}
+  .toggleTemperature {
+    pointer-events: all;
+  }
 
-.active .toggleTemperature:hover {
-  cursor: pointer;
-  text-shadow: 1px 1px black;
+  .toggleTemperature:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px @black10;
+  }
 }

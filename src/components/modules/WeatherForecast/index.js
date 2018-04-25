@@ -3,7 +3,7 @@ import { shape, object, arrayOf } from 'prop-types';
 
 import LocationDisplay from '../../elements/LocationDisplay';
 import WeatherInfo from '../../elements/WeatherInfo';
-import cx from './styles.css';
+import styles from './styles.less';
 import { FAHRENHEIT, CELCIUS } from '../../../lib/constants';
 
 class WeatherForecast extends Component {
@@ -30,7 +30,7 @@ class WeatherForecast extends Component {
     const { weather } = this.props;
 
     return (
-      <section className={cx.container}>
+      <section className={styles.container}>
         <LocationDisplay city={weather.location.city} state={weather.location.region} />
         <ul>
           {

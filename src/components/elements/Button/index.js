@@ -1,7 +1,7 @@
 import React from 'react';
 import { func, node } from 'prop-types';
 
-import styles from './styles.css';
+import styles from './styles.less';
 
 function Button({
   onClick,

@@ -3,7 +3,7 @@ import { string, number, bool, func } from 'prop-types';
 
 import { CELCIUS, FAHRENHEIT } from '../../../lib/constants';
 import WeatherIcon from '../WeatherIcon';
-import styles from './styles.css';
+import styles from './styles.less';
 import getTemperatureColor from '../../../lib/getTemperatureColor';
 import fahrenheitToCelcius from '../../../lib/fahrenheitToCelcius';
 

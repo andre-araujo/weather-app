@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
-import styles from './styles.css';
+import styles from './styles.less';
 
 function ImageBackground({
   children,

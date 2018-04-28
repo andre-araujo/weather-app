@@ -4,7 +4,7 @@ A simple app to do Weather forecast world-wide
 
 ## Usage with node
 
-`node v8.5.0+` is recomended for this project
+`node v8.11.1 LTS` is recomended for this project
 
 ### Install
 `npm install` : Get project dependencies
@@ -35,7 +35,7 @@ You can get docker at https://docs.docker.com/install/
 
 You can get docker-compose at https://docs.docker.com/compose/install/
 
-### Running the project with docker
+### Running the project
 
 Just run `docker-compose up`
 

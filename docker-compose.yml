@@ -1,11 +1,9 @@
 version: "3"
 
 services:
-  weatherserver:
-    image: node:8.5.0
+  weatherapp:
+    build: .
     ports:
-     - "3000:3000"
+     - 3000:3000
     volumes:
-     - "./:/home"
-    working_dir: /home
-    command: npm run start:prod
+     - ./:/opt/weather-app

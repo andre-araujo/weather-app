@@ -1,37 +1,30 @@
 import React, { Fragment } from 'react';
 import { string } from 'prop-types';
 
+
+import range from '../../../lib/range';
 import Icon from '../Icon';
+
+const iconDictionary = {
+  Storm: [...range(0, 5), ...range(37, 4)],
+  Snow: range(5, 12),
+  Cloudy: range(17, 10),
+  SunnyCloudy: range(28, 3),
+  Sun: range(31, 6),
+}
 
 function WeatherIcon({
   weatherCode,
 }) {
+  const code = parseInt(weatherCode);
+  const iconKey = Object.keys(iconDictionary)
+    .find(key => iconDictionary[key].indexOf(code) != -1)
+
+  const CurrentIcon = Icon[iconKey] || Icon.NA;
+
   return (
     <Fragment>
-      {
-        (weatherCode <= 4 || (weatherCode >= 37 && weatherCode <= 40)) &&
-        <Icon.Storm />
-      }
-      {
-        weatherCode >= 5 && weatherCode <= 17 &&
-        <Icon.Snow />
-      }
-      {
-        weatherCode >= 17 && weatherCode <= 28 &&
-        <Icon.Cloudy />
-      }
-      {
-        weatherCode >= 28 && weatherCode <= 30 &&
-        <Icon.SunnyCloudy />
-      }
-      {
-        weatherCode >= 31 && weatherCode <= 36 &&
-        <Icon.Sun />
-      }
-      {
-        weatherCode > 40 &&
-        <Icon.NA />
-      }
+      <CurrentIcon />
     </Fragment>
   );
 }

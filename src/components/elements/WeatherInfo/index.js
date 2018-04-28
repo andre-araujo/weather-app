@@ -26,7 +26,7 @@ function WeatherInfo({
   return (
     <div
       className={`${styles.container} ${isOpen ? styles.active : ''}`}
-      style={{ backgroundColor: getTemperatureColor(temperature, temperatureUnit) }}
+      style={{ backgroundColor: getTemperatureColor(temperature) }}
     >
       <button
         className={styles.openInfo}

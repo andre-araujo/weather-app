@@ -5,6 +5,7 @@ import LocationDisplay from '../../elements/LocationDisplay';
 import WeatherInfo from '../../elements/WeatherInfo';
 import styles from './styles.less';
 import { FAHRENHEIT, CELCIUS } from '../../../lib/constants';
+import getTemperatureColor from '../../../lib/getTemperatureColor';
 
 class WeatherForecast extends Component {
   state = {
@@ -28,32 +29,36 @@ class WeatherForecast extends Component {
   render() {
     const { infoStateList } = this.state;
     const { weather } = this.props;
+    const currentTemp = weather.data[infoStateList.indexOf(true, 0)].temperature;
+    const backgroundColor = getTemperatureColor(currentTemp, 0.3);
 
     return (
-      <section className={styles.container}>
-        <LocationDisplay city={weather.location.city} state={weather.location.region} />
-        <ul>
-          {
-            weather.data.map((weatherItem, index) => (
-              <li key={weatherItem.day}>
-                <WeatherInfo
-                  day={weatherItem.day}
-                  humidity={weatherItem.humidity}
-                  pressure={weatherItem.pressure}
-                  temperature={weatherItem.temperature}
-                  temperatureUnit={this.state.temperatureUnit}
-                  weather={weatherItem.weather}
-                  weatherCode={weatherItem.weatherCode}
-                  wind={weatherItem.wind}
-                  isOpen={infoStateList[index]}
-                  onClick={() => this.openInfoState(index)}
-                  toggleTemperatureUnit={this.toggleTemperatureUnit}
-                />
-              </li>
-            ))
-          }
-        </ul>
-      </section>
+      <div className={styles.wrapper} style={{ backgroundColor }}>
+        <section className={styles.container}>
+          <LocationDisplay city={weather.location.city} state={weather.location.region} />
+          <ul>
+            {
+              weather.data.map((weatherItem, index) => (
+                <li key={weatherItem.day}>
+                  <WeatherInfo
+                    day={weatherItem.day}
+                    humidity={weatherItem.humidity}
+                    pressure={weatherItem.pressure}
+                    temperature={weatherItem.temperature}
+                    temperatureUnit={this.state.temperatureUnit}
+                    weather={weatherItem.weather}
+                    weatherCode={weatherItem.weatherCode}
+                    wind={weatherItem.wind}
+                    isOpen={infoStateList[index]}
+                    onClick={() => this.openInfoState(index)}
+                    toggleTemperatureUnit={this.toggleTemperatureUnit}
+                  />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
     );
   }
 }

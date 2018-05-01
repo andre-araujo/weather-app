@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func } from 'prop-types';
+import { func, string } from 'prop-types';
 
 import styles from './styles.less';
 import Icon from '../../elements/Icon';
@@ -27,7 +27,7 @@ class LocationInput extends Component {
       });
     }, (error) => {
       onGetCoords({
-        error
+        error,
       });
     });
   }
@@ -53,7 +53,7 @@ class LocationInput extends Component {
           </div>
         )}
         <div className={styles.row}>
-          <Button type="button" onClick={this.handleGetCoords}>
+          <Button type="button" onClick={this.handleGetCoords} data-test="LocationInput_GetCoords">
             <span className={styles.icon}><Icon.Compass /></span>
             get location
           </Button>
@@ -66,7 +66,12 @@ class LocationInput extends Component {
   }
 }
 
+LocationInput.defaultProps = {
+  error: null,
+};
+
 LocationInput.propTypes = {
+  error: string,
   onSearch: func.isRequired,
   onGetCoords: func.isRequired,
 };

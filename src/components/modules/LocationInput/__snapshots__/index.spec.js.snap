@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationInput component should match snapshot with error message 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <input
+      onChange={[Function]}
+      placeholder="Ex: Rio de Janeiro"
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <p>
+      my error message
+    </p>
+  </div>
+  <div>
+    <Button
+      data-test="LocationInput_GetCoords"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        <Component />
+      </span>
+      get location
+    </Button>
+  </div>
+  <div>
+    <Button
+      data-test={null}
+      onClick={null}
+      type="submit"
+    >
+      Search
+    </Button>
+  </div>
+</form>
+`;
+
+exports[`LocationInput component should match snapshot with no error message 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <input
+      onChange={[Function]}
+      placeholder="Ex: Rio de Janeiro"
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <Button
+      data-test="LocationInput_GetCoords"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        <Component />
+      </span>
+      get location
+    </Button>
+  </div>
+  <div>
+    <Button
+      data-test={null}
+      onClick={null}
+      type="submit"
+    >
+      Search
+    </Button>
+  </div>
+</form>
+`;

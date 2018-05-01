@@ -48,6 +48,7 @@ function WeatherInfo({
         <div className={styles.temperature}>
           <time dateTime={new Date()}>{day}</time>
           <button
+            data-test="WeatherInfo_Temperature"
             disabled={!isOpen}
             className={styles.toggleTemperature}
             onClick={toggleTemperatureUnit}

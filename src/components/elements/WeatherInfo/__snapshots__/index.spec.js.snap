@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherInfo component should match snapshot with all props 1`] = `
+<div
+  className="undefined undefined"
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 202, 102, 0.98)",
+    }
+  }
+>
+  <div
+    className="undefined undefined"
+  >
+    <WeatherIcon
+      weatherCode="00"
+    />
+  </div>
+  <div>
+    <div>
+      <time
+        dateTime={mockConstructor {}}
+      >
+        Today
+      </time>
+      <button
+        data-test="WeatherInfo_Temperature"
+        disabled={false}
+        onClick={[Function]}
+      >
+        80
+        º
+        F
+      </button>
+    </div>
+    <div>
+      <p>
+        00
+      </p>
+      <p>
+        Wind: 
+        00
+      </p>
+      <p>
+        humidity: 
+        00
+      </p>
+      <p>
+        Pressure: 
+        00
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WeatherInfo component should match snapshot with only required props 1`] = `
+<div
+  className="undefined "
+  style={
+    Object {
+      "backgroundColor": "rgba(255, NaN, NaN, 0.98)",
+    }
+  }
+>
+  <button
+    aria-label="Open Info"
+    aria-required="true"
+    disabled={false}
+  >
+    open info
+  </button>
+  <div
+    className="undefined undefined"
+  >
+    <WeatherIcon
+      weatherCode="00"
+    />
+  </div>
+  <div>
+    <div>
+      <time
+        dateTime={mockConstructor {}}
+      />
+      <button
+        data-test="WeatherInfo_Temperature"
+        disabled={true}
+      >
+        º
+        F
+      </button>
+    </div>
+    <div />
+  </div>
+</div>
+`;

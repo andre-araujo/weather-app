@@ -3,6 +3,7 @@
 exports[`Button component should match snapshot 1`] = `
 <button
   onClick={[Function]}
+  type="button"
 >
   text
 </button>

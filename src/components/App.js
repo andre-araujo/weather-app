@@ -25,25 +25,24 @@ class App extends Component {
 
   getWeatherByLocationName = (locationName) => {
     if (locationName.length === 0) {
-      this.setState({ error: "Empty location" })
+      this.setState({ error: 'Empty location' });
       return;
     }
 
     getWeatherByLocationName(locationName)
       .then(resp => resp.json())
-      .then(resp => {
-        if(!resp.query || !resp.query.results)
-          throw new Error('Invalid location');
+      .then((resp) => {
+        if (!resp.query || !resp.query.results) { throw new Error('Invalid location'); }
         return resp;
       })
       .then(weatherForecastFactory)
       .then(weather => this.setState({ weather, error: null }))
-      .catch(fetchError => this.setState({ error: fetchError.message }))
+      .catch(fetchError => this.setState({ error: fetchError.message }));
   }
 
   getWeatherByLatLong = ({ latitude, longitude, error }) => {
     if (error) {
-      this.setState({ error: error.message })
+      this.setState({ error: error.message });
       return;
     }
 

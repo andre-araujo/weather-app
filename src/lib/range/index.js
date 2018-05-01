@@ -1,3 +1,3 @@
 export default (start, size) =>
-  Array.apply(null, Array(size))
+  Array(...Array(size))
     .map((_, i) => i + start);

@@ -27,7 +27,7 @@ beforeEach(() => {
   };
 });
 
-describe('getLatLong component', () => {
+describe('getLatLong', () => {
   it('should trigger callback with coord object', () => {
     getLatLong(({ coords }) => {
       expect(coords).toEqual({

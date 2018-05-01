@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npm run start:dev",
     "start:dev": "npm run build:dev & npm run start:server",
-    "start:prod": "npm run build:prod && npm run start:server",
+    "start:prod": "npm run build:prod && cross-env NODE_ENV=production npm run start:server",
     "start:server": "node ./server.js",
     "build:dev": "cross-env NODE_ENV=development parcel watch ./src/index.html",
     "build:prod": "cross-env NODE_ENV=production parcel build ./src/index.html --public-url /",

@@ -12,6 +12,8 @@ A simple app to do Weather forecast world-wide
 ### Run in develop mode
 `npm start` : Runs in *develop mode* with hot reload, no cashing, and no minification
 
+It will run at [http://localhost:3000]()
+
 ### Run in production mode
 `npm run start:prod` : Runs in *production mode* with a production-ready optimized build
 

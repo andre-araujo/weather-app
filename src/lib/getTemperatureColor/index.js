@@ -18,13 +18,13 @@ function getTemperatureColor(temp = 0, opacity = 0.98) {
       return rgba(100, 100, 255, opacity);
     case temperature >= 50:
       return rgba(255, 20, 20, opacity);
-    case temperature <= 15: {
+    case temperature < 15: {
       const threshold = 120;
       const variableColor = (temperature / threshold) * 100;
 
       return rgba(50, 50, 255 - variableColor, opacity);
     }
-    case temperature >= 35: {
+    case temperature > 35: {
       const threshold = 100;
       const variableColor = (temperature / threshold) * 100;
 

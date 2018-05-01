@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherForecast component should match snapshot with no error message 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 202, 102, 0.3)",
+    }
+  }
+>
+  <section>
+    <LocationDisplay
+      city="xx"
+      state="xx"
+    />
+    <ul>
+      <li
+        key="Today"
+      >
+        <WeatherInfo
+          day="Today"
+          humidity="00"
+          isOpen={true}
+          onClick={[Function]}
+          pressure="00"
+          temperature="80"
+          temperatureUnit="F"
+          toggleTemperatureUnit={[Function]}
+          weather="00"
+          weatherCode="00"
+          wind="00"
+        />
+      </li>
+      <li
+        key="Tomorrow"
+      >
+        <WeatherInfo
+          day="Tomorrow"
+          humidity={null}
+          isOpen={false}
+          onClick={[Function]}
+          pressure={null}
+          temperature="80"
+          temperatureUnit="F"
+          toggleTemperatureUnit={[Function]}
+          weather="00"
+          weatherCode="00"
+          wind={null}
+        />
+      </li>
+      <li
+        key="After Tomorrow"
+      >
+        <WeatherInfo
+          day="After Tomorrow"
+          humidity={null}
+          isOpen={false}
+          onClick={[Function]}
+          pressure={null}
+          temperature="80"
+          temperatureUnit="F"
+          toggleTemperatureUnit={[Function]}
+          weather="00"
+          weatherCode="00"
+          wind={null}
+        />
+      </li>
+    </ul>
+  </section>
+</div>
+`;

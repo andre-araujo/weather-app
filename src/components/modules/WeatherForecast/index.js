@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { shape, object, arrayOf } from 'prop-types';
+import { shape, string, arrayOf } from 'prop-types';
 
 import LocationDisplay from '../../elements/LocationDisplay';
 import WeatherInfo from '../../elements/WeatherInfo';
@@ -66,8 +66,16 @@ class WeatherForecast extends Component {
 WeatherForecast.propTypes = {
   weather: shape({
     data: arrayOf(shape(WeatherInfo.propTypes)),
-    location: object,
-    units: object,
+    location: shape({
+      city: string,
+      region: string,
+    }),
+    units: shape({
+      distance: string,
+      pressure: string,
+      speed: string,
+      temperature: string,
+    }),
   }).isRequired,
 };
 

@@ -65,8 +65,8 @@ exports[`WeatherInfo component should match snapshot with only required props 1`
 >
   <button
     aria-label="Open Info"
-    aria-required="true"
     disabled={false}
+    onClick={null}
   >
     open info
   </button>
@@ -85,6 +85,7 @@ exports[`WeatherInfo component should match snapshot with only required props 1`
       <button
         data-test="WeatherInfo_Temperature"
         disabled={true}
+        onClick={null}
       >
         º
         F

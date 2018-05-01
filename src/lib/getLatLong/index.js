@@ -11,7 +11,7 @@
  */
 function getLatLong(callback, errorCallback) {
   if (typeof window !== 'undefined') {
-    window.navigator.geolocation.getCurrentPosition(callback, errorCallback);
+    navigator.geolocation.getCurrentPosition(callback, errorCallback);
   }
 }
 

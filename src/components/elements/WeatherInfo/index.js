@@ -35,7 +35,6 @@ function WeatherInfo({
             disabled={isOpen}
             onClick={onClick}
             aria-label="Open Info"
-            aria-required="true"
           >
             open info
           </button>
@@ -77,6 +76,8 @@ WeatherInfo.defaultProps = {
   weatherCode: null,
   wind: null,
   isOpen: false,
+  toggleTemperatureUnit: null,
+  onClick: null,
 };
 
 WeatherInfo.propTypes = {

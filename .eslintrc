@@ -21,7 +21,8 @@
       "fetch": true,
       "window": true,
       "jest": true,
-      "beforeEach": true
+      "beforeEach": true,
+      "navigator": true
   },
   "rules": {
       "linebreak-style": [0],

@@ -1,6 +1,7 @@
 /**
  * Invoke geolocation getCurrentPosition to guess coordinates
  * @param {Function} callback - callback function that receives an object with coordinates
+ * @param {Function} errorCallback - callback function that receives an Error
  * {
  *  coords: {
  *    latitude: Number,
@@ -8,9 +9,9 @@
  *  }
  * }
  */
-function getLatLong(callback) {
+function getLatLong(callback, errorCallback) {
   if (typeof window !== 'undefined') {
-    window.navigator.geolocation.getCurrentPosition(callback);
+    window.navigator.geolocation.getCurrentPosition(callback, errorCallback);
   }
 }
 

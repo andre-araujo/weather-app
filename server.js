@@ -4,7 +4,7 @@ const request = require('request');
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 3001;
 const BING_API = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=pt-BR';
 
 app.use(express.static(path.join(__dirname, './dist')));

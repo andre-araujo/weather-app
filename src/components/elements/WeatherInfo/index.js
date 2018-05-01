@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, bool, func } from 'prop-types';
+import { string, number, bool, func, oneOfType } from 'prop-types';
 
 import { CELCIUS, FAHRENHEIT } from '../../../lib/constants';
 import WeatherIcon from '../WeatherIcon';
@@ -75,15 +75,15 @@ WeatherInfo.defaultProps = {
 WeatherInfo.propTypes = {
   day: string,
   temperatureUnit: string,
-  toggleTemperatureUnit: func.isRequired,
+  toggleTemperatureUnit: func,
   humidity: string,
   pressure: string,
-  temperature: number,
+  temperature: oneOfType([string, number]),
   weather: string,
   weatherCode: string,
   wind: string,
   isOpen: bool,
-  onClick: func.isRequired,
+  onClick: func,
 };
 
 export default WeatherInfo;

@@ -17,19 +17,25 @@ class LocationInput extends Component {
     });
   }
 
-  handleGetCoords = () => {
+  handleGetCoords = (e) => {
     const { onGetCoords } = this.props;
+    e.preventDefault();
 
     getLatLong(({ coords }) => {
       onGetCoords({
         latitude: coords.latitude,
         longitude: coords.longitude,
       });
+    }, (error) => {
+      onGetCoords({
+        error
+      });
     });
   }
 
-  handleSearch = () => {
+  handleSearch = (e) => {
     const { onSearch } = this.props;
+    e.preventDefault();
 
     onSearch(this.state.location);
   }
@@ -38,10 +44,15 @@ class LocationInput extends Component {
     const { location } = this.state;
 
     return (
-      <div className={styles.container}>
+      <form className={styles.container} onSubmit={this.handleSearch}>
         <div className={styles.row}>
           <input className={styles.input} type="text" onChange={this.handleInput} value={location} placeholder="Ex: Rio de Janeiro" />
         </div>
+        {this.props.error && (
+          <div className={styles.row}>
+            <p className={styles.error}>{this.props.error}</p>
+          </div>
+        )}
         <div className={styles.row}>
           <Button onClick={this.handleGetCoords}>
             <span className={styles.icon}><Icon.Compass /></span>
@@ -49,9 +60,9 @@ class LocationInput extends Component {
           </Button>
         </div>
         <div className={styles.row}>
-          <Button onClick={this.handleSearch}>Search</Button>
+          <Button type="submit">Search</Button>
         </div>
-      </div>
+      </form>
     );
   }
 }

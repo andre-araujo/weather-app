@@ -13,7 +13,7 @@ function Button({
 }
 
 Button.propTypes = {
-  onClick: func.isRequired,
+  onClick: func,
   children: node.isRequired,
 };
 

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageBackground component should match snapshot 1`] = `
+<div>
+  <figure>
+    <img
+      alt="background"
+      src="#"
+    />
+  </figure>
+</div>
+`;
+
+exports[`ImageBackground component should match snapshot with children 1`] = `
+<div>
+  <figure>
+    <img
+      alt="background"
+      src="#"
+    />
+  </figure>
+  my content
+</div>
+`;
+
+exports[`ImageBackground component should match snapshot with image background 1`] = `
+<div>
+  <figure>
+    <img
+      alt="background"
+      src="/my-image-path"
+    />
+  </figure>
+</div>
+`;

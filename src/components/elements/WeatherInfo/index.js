@@ -28,13 +28,19 @@ function WeatherInfo({
       className={`${styles.container} ${isOpen ? styles.active : ''}`}
       style={{ backgroundColor: getTemperatureColor(temperature) }}
     >
-      <button
-        className={styles.openInfo}
-        disabled={isOpen}
-        onClick={onClick}
-      >
-        open info
-      </button>
+      {
+        !isOpen && (
+          <button
+            className={styles.openInfo}
+            disabled={isOpen}
+            onClick={onClick}
+            aria-label="Open Info"
+            aria-required="true"
+          >
+            open info
+          </button>
+        )
+      }
       <div className={`${styles.icon} ${styles.hidden}`}>
         <WeatherIcon weatherCode={weatherCode} />
       </div>

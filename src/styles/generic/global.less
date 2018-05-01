@@ -1,3 +1,5 @@
+@import '../settings/breakpoints.less';
+
 html,
 body {
   font-size: 12px;
@@ -5,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 
-  @media (min-width: 680px) {
+  @media (min-width: @sm) {
     font-size: 16px;
   }
 }

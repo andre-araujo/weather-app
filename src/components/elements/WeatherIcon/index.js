@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { string } from 'prop-types';
 
-
 import range from '../../../lib/range';
 import Icon from '../Icon';
 

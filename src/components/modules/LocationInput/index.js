@@ -17,9 +17,8 @@ class LocationInput extends Component {
     });
   }
 
-  handleGetCoords = (e) => {
+  handleGetCoords = () => {
     const { onGetCoords } = this.props;
-    e.preventDefault();
 
     getLatLong(({ coords }) => {
       onGetCoords({
@@ -54,7 +53,7 @@ class LocationInput extends Component {
           </div>
         )}
         <div className={styles.row}>
-          <Button onClick={this.handleGetCoords}>
+          <Button type="button" onClick={this.handleGetCoords}>
             <span className={styles.icon}><Icon.Compass /></span>
             get location
           </Button>

@@ -59,7 +59,7 @@ exports[`WeatherInfo component should match snapshot with only required props 1`
   className="undefined "
   style={
     Object {
-      "backgroundColor": "rgba(255, NaN, NaN, 0.98)",
+      "backgroundColor": "rgba(100, 100, 255, 0.98)",
     }
   }
 >

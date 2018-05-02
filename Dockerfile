@@ -6,4 +6,4 @@ WORKDIR /opt/weather-app
 EXPOSE 3000
 RUN npm install --production
 
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "start"]

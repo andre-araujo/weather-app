@@ -60,3 +60,5 @@ Just run `docker-compose up`
   - Helps keep styles code clean and organized
 - [*CSSModules*](https://github.com/css-modules)
   - Keeps css socpe for each component
+- [*nsp*](https://github.com/nodesecurity/nsp)
+  - CLI tool to help identify known vulnerabilities in packages

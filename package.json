@@ -9,6 +9,7 @@
   "author": "andre-araujo <andreluis9214@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "postinstall": "nsp check",
     "start": "npm run prod",
     "dev": "parallelshell \"npm run build:dev\" \"npm run server\"",
     "prod": "npm run build:prod && cross-env NODE_ENV=production npm run server",
@@ -35,6 +36,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "jest": "^21.2.1",
+    "nsp": "^3.2.1",
     "parallelshell": "^3.0.2",
     "raf": "^3.4.0",
     "react-addons-test-utils": "^15.6.0",

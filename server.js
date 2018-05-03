@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const app = express();
 
-const PORT = 3001;
+const PORT = 3000;
 const BING_API = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=pt-BR';
 
 app.use(express.static(path.join(__dirname, './dist')));

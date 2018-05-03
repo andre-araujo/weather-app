@@ -9,7 +9,6 @@
   "author": "andre-araujo <andreluis9214@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "nsp check",
     "start": "npm run prod",
     "dev": "parallelshell \"npm run build:dev\" \"npm run server\"",
     "prod": "npm run build:prod && cross-env NODE_ENV=production npm run server",
@@ -20,7 +19,8 @@
     "lint:fix": "eslint ./src --fix",
     "lint": "eslint ./src",
     "test": "jest --no-cache",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "security": "nsp check"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

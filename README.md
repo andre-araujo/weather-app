@@ -1,10 +1,13 @@
 # Weather forecast
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-A simple app to do Weather forecast world-wide
+A simple app to do Weather forecast world-wide using [*Parceljs*](https://parceljs.org/) and [*ReactJs*](https://reactjs.org/)
+
+*Location API will only work in dev mode or HTTPS enviroment*
 
 ## Usage with node
 
-`node v8.11.1 LTS` is recomended for this project
+`node v8.11.1 LTS` or above is recomended for this project
 
 ### Install
 `npm install` : Get project dependencies
@@ -23,6 +26,9 @@ It will run at [http://localhost:3000]()
 ## Testing
 `npm run test:coverage` : Runs test coverage using jest as a testing tool
 
+## Running security check
+`npm run security` : Check security issues with [nsp](https://github.com/nodesecurity/nsp)
+
 ## Usage with docker
 
 The [Docker](https://www.docker.com/what-docker) platform leverages Docker containers to enable IT operations teams and Developement teams to build, ship and run any application, anywhere.
@@ -40,6 +46,10 @@ You can get docker-compose at https://docs.docker.com/compose/install/
 ### Running the project
 
 Just run `docker-compose up`
+
+### Build with docker-compose excluding cache
+
+`docker-compose build --no-cache`
 
 ## Project stack
 

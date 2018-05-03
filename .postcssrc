@@ -10,9 +10,6 @@
       "mediaQuery": false,
       "minPixelValue": 0
     },
-    "postcss-modules": {
-      "generateScopedName": "_[path]_[name]__[local]"
-    },
     "autoprefixer": {
       "browsers": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"],
       "flexbox": "no-2009"

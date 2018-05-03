@@ -1,9 +1,13 @@
 FROM node:8.11.1-alpine
 
-COPY ./ /opt/weather-app
 WORKDIR /opt/weather-app
 
-EXPOSE 3000
+COPY package*.json ./
+
 RUN npm install --production
 
-CMD ["npm", "start"]
+COPY ./ /opt/weather-app
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]

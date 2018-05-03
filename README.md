@@ -39,17 +39,13 @@ This project uses docker to ensure stability in production enviroments.
 
 You can get docker at https://docs.docker.com/install/
 
-### Install docker-compose
+### Build the image
 
-You can get docker-compose at https://docs.docker.com/compose/install/
+`docker build -t weatherapp`
 
 ### Running the project
 
-Just run `docker-compose up`
-
-### Build with docker-compose excluding cache
-
-`docker-compose build --no-cache`
+`docker run -p 3000:3000 weatherapp`
 
 ## Project stack
 

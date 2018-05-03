@@ -20,10 +20,11 @@ class App extends Component {
     getImage()
       .then(resp => resp.json())
       .then(imageFactory)
-      .then(({ imageURL }) => this.setState({ imageURL }));
+      .then(({ imageURL }) => this.setState({ imageURL }))
+      .catch(fetchError => this.setState({ error: fetchError.message }));
   }
 
-  getWeatherByLocationName = (locationName) => {
+  getWeatherByLocationName = (locationName = '') => {
     if (locationName.length === 0) {
       this.setState({ error: 'Empty location' });
       return;

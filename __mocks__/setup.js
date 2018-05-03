@@ -9,6 +9,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 global.Date = jest.fn()
 
+global.Date.now = jest.fn();
+
 const mockGeolocation = {
   getCurrentPosition: jest.fn(
     (callback, error) => {

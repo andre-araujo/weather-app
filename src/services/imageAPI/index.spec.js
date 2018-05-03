@@ -4,7 +4,7 @@ import { IMAGE_API_URL } from '../../lib/constants';
 global.fetch = jest.fn(() => Promise.resolve({ status: 200 }));
 
 beforeEach(() => {
-  global.fetch.mockReset();
+  global.fetch.mockClear();
 });
 
 describe('imageAPI', () => {

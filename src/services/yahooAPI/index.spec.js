@@ -3,7 +3,7 @@ import { getWeatherByLocationName, getWeatherByLatLong } from './index';
 global.fetch = jest.fn(() => Promise.resolve({ status: 200 }));
 
 beforeEach(() => {
-  global.fetch.mockReset();
+  global.fetch.mockClear();
 });
 
 describe('yahooAPI', () => {
